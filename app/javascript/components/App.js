@@ -1,7 +1,16 @@
 import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Greeting from './Greeting';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Greeting />,
+  },
+]);
 
 const App = () => {
-  return <h1>App.js</h1>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
